@@ -2,7 +2,3 @@
 UMSA - FCPN - Carrera de Informática
 Examen Práctico
 
-Base de datos:
-
-Ejercicio 1:
-
