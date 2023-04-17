@@ -89,6 +89,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <!-- end of mobile menu toggle button -->
         </div>
         
+	<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#callMe">INICIAR SESIÓN</a>
+                </li>
+            </ul>
+        </div>
 
         
     </nav> <!-- end of navbar -->
@@ -105,24 +112,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="col-md-12">
                     <div class="wrapper_form fadeInDown_form" >
                         <div id="formContent_form">
-                          <!-- Tabs Titles -->
+                          <!-- Tabs Titles
                           <h2 class="active_form h2_form"> Iniciar Sesión </h2>
-                          
+                          -->
                       
                           <!-- Icon -->
                           <div class="fadeIn_form first_form">
-                            <img src="../logos/restriccion-de-cuenta.png" id="icon_form" alt="" />
+                            <img src="../logos/restriccion-de-cuenta.png" id="icon_form" alt="" style="padding-top:23px; width:250px;"/>
                           </div>
                       
                           <!-- Login Form -->
                           <form method="post" action="index.php">
+				<?php if (isset($errores)) { ?>
+                                	<p class="error_login"><?php echo $errores; ?></p>
+                            	<?php } ?>
                             <input type="text" id="username" class="fadeIn_form second_form" name="username" placeholder="usuario">
                             <input type="password" id="password" class="fadeIn_form third_form" name="password" placeholder="contraseña">
                             <input type="submit" class="fadeIn_form fourth_form" name="submit" value="Acceder">
-                            <?php if (isset($errores)) { ?>
-                                <p class="error_login"><?php echo $errores; ?></p>
-                            <?php } ?>
-                        
+                                                    
                           </form>
                       
                           <!-- Remind Passowrd -->
